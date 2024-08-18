@@ -1,0 +1,103 @@
+:root{
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --fb-size:16px;
+
+    --ff-red-hat-display:'Red Hat Display', sans-serif;
+
+    --fw-regular:500;
+    --fw-bold:700;
+    --fw-bolder:900;
+}
+
+body{
+    background-color: var(--pale-blue);
+    margin: 1.5rem;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+
+    font-family: var(--ff-red-hat-display);
+    font-size: var(--fb-size);
+    font-weight: var(--fw-regular);
+    color: var(--dark-blue);
+}
+
+.order{
+    display: grid;
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 370px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.order .content{
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    padding: 1.5rem;
+}
+.content .description{
+    color: var(--desaturated-blue);
+}
+.content .plan{
+    background-color: var(--very-pale-blue);
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    place-items: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.plan p:first-child{
+    color: var(--dark-blue);
+    font-weight: var(--fw-bolder);
+    min-width: fit-content;
+    font-size: 15px;
+}
+
+button{
+    padding: .5rem;
+    background-color: var(--bright-blue);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: var(--fw-bold);
+    font-size: 15px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    width: 100%;
+    cursor: pointer;
+    transition: all .3s ease;
+    
+}
+.plan a{
+    font-weight: var(--fw-bold);
+    color: var(--bright-blue);
+}
+.plan a:hover{
+    text-decoration: none;
+    color: hsl(245, 100%, 65%);
+    transition: all .3s ease;
+}
+.cancel-btn{
+    text-decoration: none;
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-bolder);
+}
+.cancel-btn:hover{
+    text-decoration: none;
+    color: hsl(223, 47%, 23%);
+    transition: all .3s ease;
+}
+button:hover{
+    background-color: hsl(245, 100%, 65%);
+
+}
